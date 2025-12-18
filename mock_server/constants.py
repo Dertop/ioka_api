@@ -1,0 +1,22 @@
+from datetime import datetime
+
+ORDER_STATUS_PENDING = "pending"
+PAYMENT_STATUS_PENDING = "pending"
+PAYMENT_STATUS_REFUNDED = "refunded"
+REFUND_STATUS_COMPLETED = "completed"
+
+ERROR_INVALID_REQUEST = "INVALID_REQUEST"
+ERROR_VALIDATION_ERROR = "VALIDATION_ERROR"
+ERROR_NOT_FOUND = "NOT_FOUND"
+ERROR_INVALID_STATUS = "INVALID_STATUS"
+
+DEFAULT_CURRENCY = "KZT"
+DEFAULT_PAYMENT_METHOD = "card"
+
+MIN_PROCESSING_TIME = 0.001
+MAX_PROCESSING_TIME = 0.01
+
+
+def get_current_timestamp() -> str:
+    return datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+
